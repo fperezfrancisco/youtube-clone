@@ -115,7 +115,7 @@ header i:hover {
 .mainContainer {
   width: 100%;
   padding: 86px 1.75rem;
-  padding-left: 150px;
+  padding-left: 1.75rem;
   right: auto;
   height: 100%;
   position: relative;
@@ -228,7 +228,7 @@ header i:hover {
 .reelsContainer {
   grid-column: 1 / -1;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1rem;
 }
 
@@ -253,6 +253,9 @@ header i:hover {
   aspect-ratio: 9 / 16;
   background-color: grey;
   border-radius: 1rem;
+  background-image: url("thumbnail-portrait.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 .reelBoxContainer .copyContainer {
@@ -265,11 +268,12 @@ header i:hover {
 .sideContainer {
   z-index: 100;
   top: 70px;
-  width: 120px;
+  width: 90px;
   height: 500px;
   padding: 1rem;
   /*background-color: #3ea6ff;*/
   position: fixed;
+  display: none;
   color: var(--text-color);
   flex-direction: column;
   align-items: center;
@@ -306,4 +310,14 @@ header i:hover {
 
 .menuLi:hover {
   background-color: var(--category-bkg);
+}
+
+@media only screen and (min-width: 768px) {
+  .mainContainer {
+    padding-left: 100px;
+  }
+
+  .sideContainer {
+    display: flex;
+  }
 }
