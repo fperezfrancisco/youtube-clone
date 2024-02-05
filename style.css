@@ -88,6 +88,11 @@ video {
   display: none;
 }
 
+.searchIcon {
+  background-color: none;
+  border-radius: 100%;
+}
+
 .menuContainer,
 .iconContainer {
   display: flex;
@@ -312,6 +317,41 @@ header i:hover {
   background-color: var(--category-bkg);
 }
 
+@media only screen and (min-width: 600px) {
+  .inputContainer {
+    width: 100%;
+    padding: 0rem 1rem;
+    justify-content: flex-end;
+    background-color: var(--main-bkg-color);
+    margin: 0rem 4rem;
+    border-radius: 1.5rem;
+    padding-left: 0%;
+    max-width: 500px;
+  }
+
+  .searchInput {
+    display: flex;
+    width: 100%;
+    padding: 0.25rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    box-shadow: none;
+    border: 1px solid var(--category-bkg);
+    background-color: var(--main-bkg-color);
+    color: var(--text-secondary);
+    padding-left: 1.25rem;
+  }
+
+  .searchIcon {
+    background-color: var(--category-bkg);
+    border-radius: 0%;
+    border-bottom-right-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    padding-right: 0.75rem;
+    padding-left: 1.5rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .mainContainer {
     padding-left: 100px;
@@ -319,5 +359,9 @@ header i:hover {
 
   .sideContainer {
     display: flex;
+  }
+
+  .inputContainer {
+    max-width: 750px;
   }
 }
